@@ -1,0 +1,14 @@
+{
+  "name": "db-connection",
+  "version": "1.0.0",
+  "description": "node-day-02",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hansaja",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^3.9.2"
+  }
+}
