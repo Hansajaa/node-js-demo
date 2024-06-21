@@ -11,4 +11,41 @@ D - Dependency Inversion Principle.
 
 Node Application Create command --> npm init
 
+
+--------------------------------------------------------
+
+outdated npm packages updates
+
+check outdated packages -> npm outdated
+
+after check outdated dependencies run below commands
+
+1. npm install -g npm-check-updates
+2. ncu -u
+3. npm install
+
+
+-----------------------------------------------------
+
+Event Loop
+
+    ┌───────────────────────────┐
+┌─>│           timers                │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+│  │     pending callbacks           │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+│  │       idle, prepare             │
+│  └─────────────┬─────────────┘      ┌───────────────┐
+│  ┌─────────────┴─────────────┐      │        incoming: │
+│  │           poll                  │<────┤       connections│
+│  └─────────────┬─────────────┘      │        data, etc.│
+│  ┌─────────────┴─────────────┐      └───────────────┘
+│  │           check                 │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+└──┤      close callbacks            │
+   └───────────────────────────┘
+
  
